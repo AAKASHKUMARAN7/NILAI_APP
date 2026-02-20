@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-// ARAM — Chat Input Bar (bottom of center panel)
+// Nilai — Chat Input Bar (bottom of center panel)
 export default function ChatInput({ onSend, isLoading }) {
   const [input, setInput] = useState('');
 
@@ -21,7 +21,7 @@ export default function ChatInput({ onSend, isLoading }) {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Describe your situation... ARAM will find the constitutional answer"
+          placeholder="Describe your situation... Nilai will find the constitutional answer"
           disabled={isLoading}
           className="chat-input"
           autoFocus
@@ -40,7 +40,7 @@ export default function ChatInput({ onSend, isLoading }) {
         </button>
       </div>
       <p className="input-hint">
-        ARAM uses the Indian Constitution, landmark cases & RAG knowledge base to reason about your rights
+        Nilai uses the Indian Constitution, landmark cases & RAG knowledge base to reason about your rights
       </p>
     </form>
   );

@@ -1,17 +1,17 @@
 'use client';
 
-import AramLogo from './AramLogo';
+import NilaiLogo from './NilaiLogo';
 
-// ARAM — Welcome Screen (shown before first message)
+// Nilai — Welcome Screen (shown before first message)
 export default function WelcomeScreen({ starters, onStarterClick }) {
   return (
     <div className="welcome-screen">
       <div className="welcome-logo">
-        <AramLogo size={80} />
+        <NilaiLogo size={80} color="#8B7355" />
       </div>
 
-      <h1 className="welcome-title">அறம்</h1>
-      <h2 className="welcome-subtitle">ARAM · Constitutional Intelligence</h2>
+      <h1 className="welcome-title">நிலை</h1>
+      <h2 className="welcome-subtitle">NILAI · State of Being</h2>
 
       <p className="welcome-desc">
         Describe your situation — I&apos;ll reason through the Indian Constitution 
@@ -20,16 +20,16 @@ export default function WelcomeScreen({ starters, onStarterClick }) {
 
       <div className="welcome-features">
         <div className="feature">
-          <span className="feature-icon">🧠</span>
+          <span className="feature-icon">△</span>
           <span>RAG-powered knowledge: Full Constitution + Landmark Cases</span>
         </div>
         <div className="feature">
-          <span className="feature-icon">🪔</span>
+          <span className="feature-icon">●</span>
           <span>Context-based reasoning, not keyword search</span>
         </div>
         <div className="feature">
-          <span className="feature-icon">📖</span>
-          <span>Dynamic learning: ARAM improves from every interaction</span>
+          <span className="feature-icon">நி</span>
+          <span>Dynamic learning: Nilai improves from every interaction</span>
         </div>
       </div>
 
@@ -41,7 +41,6 @@ export default function WelcomeScreen({ starters, onStarterClick }) {
             className="starter-card"
             onClick={() => onStarterClick(s.text)}
           >
-            <span className="starter-icon">{s.icon}</span>
             <span className="starter-text">{s.text}</span>
             <span className="starter-topic">{s.topic}</span>
           </button>

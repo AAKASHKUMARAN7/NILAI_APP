@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 
-// ARAM — Right Panel
+// Nilai — Right Panel
 // Tab 1: Reasoning Trace (shows AI's chain of thought)
-// Tab 2: About ARAM
+// Tab 2: About Nilai
 
 export default function RightPanel({ thinkingTrace, sources }) {
   const [activeTab, setActiveTab] = useState('reasoning');
@@ -17,13 +17,13 @@ export default function RightPanel({ thinkingTrace, sources }) {
           className={`panel-tab ${activeTab === 'reasoning' ? 'active' : ''}`}
           onClick={() => setActiveTab('reasoning')}
         >
-          🧠 Reasoning
+          Reasoning
         </button>
         <button
           className={`panel-tab ${activeTab === 'about' ? 'active' : ''}`}
           onClick={() => setActiveTab('about')}
         >
-          🪔 About
+          About
         </button>
       </div>
 
@@ -55,9 +55,9 @@ export default function RightPanel({ thinkingTrace, sources }) {
             </>
           ) : (
             <div className="panel-empty">
-              <p>🧠 Reasoning trace will appear here after you ask a question.</p>
+              <p>Reasoning trace will appear here after you ask a question.</p>
               <p className="panel-empty-hint">
-                ARAM shows its constitutional reasoning chain — how it identified values,
+                Nilai shows its constitutional reasoning chain — how it identified values,
                 matched provisions, and arrived at its answer.
               </p>
             </div>
@@ -68,22 +68,23 @@ export default function RightPanel({ thinkingTrace, sources }) {
       {/* About Tab */}
       {activeTab === 'about' && (
         <div className="panel-content">
-          <h3 className="panel-section-title">About அறம் ARAM</h3>
+          <h3 className="panel-section-title">About நிலை Nilai</h3>
 
           <div className="about-section">
-            <h4>What is ARAM?</h4>
+            <h4>What is Nilai?</h4>
             <p>
-              ARAM (அறம்) means Dharma, Righteousness, and Virtue in Tamil.
+              Nilai (நிலை) means "State of Being" in Tamil.
               It is a Constitutional Intelligence AI that helps every Indian understand
               how the Constitution applies to their real-life situation.
+              Body, Mind, and Action — when these three align, that is நிலை.
             </p>
           </div>
 
           <div className="about-section">
-            <h4>How is ARAM Different?</h4>
+            <h4>How is Nilai Different?</h4>
             <p>
               Most legal tools work like a search engine: keyword → matching articles.
-              ARAM is different. It <strong>reasons</strong> through constitutional values,
+              Nilai is different. It <strong>reasons</strong> through constitutional values,
               identifies what&apos;s at stake, and then maps to specific provisions.
             </p>
           </div>
@@ -91,9 +92,9 @@ export default function RightPanel({ thinkingTrace, sources }) {
           <div className="about-section">
             <h4>RAG Knowledge Base</h4>
             <p>
-              ARAM uses a built-in knowledge base containing the full Indian Constitution —
+              Nilai uses a built-in knowledge base containing the full Indian Constitution —
               all major Articles, Schedules, Amendments, and Landmark Supreme Court cases.
-              When you ask a question, ARAM searches this knowledge base first, then reasons
+              When you ask a question, Nilai searches this knowledge base first, then reasons
               using the most relevant passages.
             </p>
           </div>
@@ -101,28 +102,29 @@ export default function RightPanel({ thinkingTrace, sources }) {
           <div className="about-section">
             <h4>Dynamic Learning</h4>
             <p>
-              ARAM learns from every interaction. It tracks which topics are asked most,
+              Nilai learns from every interaction. It tracks which topics are asked most,
               records feedback on helpfulness, and uses this to improve over time.
-              The more you use ARAM, the smarter it gets.
+              The more you use Nilai, the smarter it gets.
             </p>
           </div>
 
           <div className="about-section">
             <h4>The Logo</h4>
             <p>
-              The golden elder&apos;s footprint beside the small ivory child&apos;s footprint
-              represents the Constitution&apos;s promise: to protect every generation — from
-              the child taking first steps to the elder who has walked this republic for decades.
+              The equilateral triangle with a center dot represents three aspects of
+              human existence: Body, Mind, and Action. The dot at the center represents
+              the unmoving state of being — the stillness, balance, and inner calm
+              that is நிலை.
             </p>
           </div>
 
           <div className="about-section">
-            <h4>Architecture</h4>
+            <h4>What Nilai Can Do</h4>
             <ul className="about-list">
-              <li><strong>Layer 1:</strong> Constitutional deep knowledge in system prompt</li>
-              <li><strong>Layer 2:</strong> RAG retrieval from 80+ constitutional passages</li>
-              <li><strong>Layer 3:</strong> Landmark case reasoning patterns</li>
-              <li><strong>Layer 4:</strong> Dynamic learning from user interactions</li>
+              <li><strong>Explain</strong> any Article, Amendment, or Schedule of the Constitution</li>
+              <li><strong>Analyze</strong> real-life situations and identify your constitutional rights</li>
+              <li><strong>Guide</strong> you on legal remedies, helplines, and where to file complaints</li>
+              <li><strong>Reference</strong> landmark Supreme Court judgments for deeper understanding</li>
             </ul>
           </div>
 
@@ -131,8 +133,7 @@ export default function RightPanel({ thinkingTrace, sources }) {
           </div>
 
           <div className="about-credits">
-            <p>Stack: Next.js + Groq + RAG</p>
-            <p>Cost: ₹0</p>
+            <p>Nilai — Constitutional Intelligence</p>
           </div>
         </div>
       )}

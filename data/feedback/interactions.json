@@ -53,14 +53,70 @@
       "helpful": null,
       "sessionId": "session-1771589038849",
       "timestamp": "2026-02-20T12:03:59.302Z"
+    },
+    {
+      "question": "My landlord is threatening to evict me without notice. What are my rights?",
+      "topics": [
+        "Article 300A",
+        "Article 21",
+        "Article 352",
+        "Article 356"
+      ],
+      "helpful": null,
+      "sessionId": "session-1771603344325",
+      "timestamp": "2026-02-20T16:02:25.047Z"
+    },
+    {
+      "question": "My landlord is threatening to evict me without notice. What are my rights?",
+      "topics": [
+        "Article 300A",
+        "Article 21",
+        "Article 323A",
+        "Article 324"
+      ],
+      "helpful": null,
+      "sessionId": "session-1771605657269",
+      "timestamp": "2026-02-20T16:40:58.009Z"
+    },
+    {
+      "question": "kill person inside the court",
+      "topics": [
+        "Article 32",
+        "Article 226",
+        "Article 21",
+        "Article 21"
+      ],
+      "helpful": null,
+      "sessionId": "session-1771605691593",
+      "timestamp": "2026-02-20T16:41:31.629Z"
+    },
+    {
+      "question": "killed the people inside the office",
+      "topics": [
+        "Article 21",
+        "Article 19",
+        "Article 21",
+        "Article 19",
+        "Article 311"
+      ],
+      "helpful": null,
+      "sessionId": "session-1771606824495",
+      "timestamp": "2026-02-20T17:00:24.830Z"
     }
   ],
   "topicFrequency": {
-    "Article 21": 4,
-    "Article 300A": 1,
+    "Article 21": 10,
+    "Article 300A": 3,
     "Article 14": 2,
     "Article 15": 1,
-    "Article 19": 1
+    "Article 19": 3,
+    "Article 352": 1,
+    "Article 356": 1,
+    "Article 323A": 1,
+    "Article 324": 1,
+    "Article 32": 1,
+    "Article 226": 1,
+    "Article 311": 1
   },
-  "totalQuestions": 6
+  "totalQuestions": 10
 }

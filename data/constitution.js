@@ -1,6 +1,6 @@
-// ARAM Constitutional Knowledge Base
+// Nilai Constitutional Knowledge Base
 // Full Indian Constitution - Articles, Schedules, Amendments, Landmark Cases
-// This serves as ARAM's RAG dataset - no external API or Kaggle download needed
+// This serves as Nilai's RAG dataset - no external API or Kaggle download needed
 
 const constitutionalData = [
   // ═══════════════ PREAMBLE ═══════════════

@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "அறம் ARAM · Constitutional Intelligence",
-  description: "ARAM helps every Indian understand how the Constitution applies to their real-life situation through context-based reasoning.",
+  title: "நிலை Nilai · State of Being",
+  description: "Nilai helps every Indian understand how the Constitution applies to their real-life situation through context-based reasoning.",
   icons: { icon: "/favicon.ico" },
 };
 

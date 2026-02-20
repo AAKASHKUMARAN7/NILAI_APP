@@ -40,7 +40,7 @@ export default function Home() {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Send a message to the ARAM API
+  // Send a message to the Nilai API
   const sendMessage = useCallback(async (text) => {
     if (!text.trim() || isLoading) return;
 
@@ -70,14 +70,14 @@ export default function Home() {
       const parsed = parseResponse(data.text);
       const sources = data.sources || [];
 
-      const aramMsg = {
+      const nilaiMsg = {
         role: 'assistant',
         content: data.text,
         parsed,
         sources
       };
 
-      setMessages(prev => [...prev, aramMsg]);
+      setMessages(prev => [...prev, nilaiMsg]);
       setThinkingTrace(parsed.thinking);
       setCurrentSources(sources);
 
@@ -160,7 +160,7 @@ export default function Home() {
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="aram-app">
+    <div className="nilai-app">
       {/* Mobile sidebar toggle */}
       <button
         className="mobile-sidebar-toggle"
@@ -201,14 +201,14 @@ export default function Home() {
                 />
               ))}
               {isLoading && (
-                <div className="message-row aram-row">
-                  <div className="message aram-message loading-message">
+                <div className="message-row nilai-row">
+                  <div className="message nilai-message loading-message">
                     <div className="loading-dots">
                       <span className="dot dot1">●</span>
                       <span className="dot dot2">●</span>
                       <span className="dot dot3">●</span>
                     </div>
-                    <p className="loading-text">ARAM is reasoning through the Constitution...</p>
+                    <p className="loading-text">Nilai is reasoning through the Constitution...</p>
                   </div>
                 </div>
               )}

@@ -1,11 +1,14 @@
-// ARAM — Markdown Law Loader
+// Nilai — Markdown Law Loader
 // Reads .md files from data/laws/ and parses them into the same format as constitution.js
 // Drop any .md file into data/laws/ and it gets auto-loaded into the knowledge base
 
 const fs = require('fs');
 const path = require('path');
 
-const LAWS_DIR = path.join(__dirname, 'laws');
+// Use process.cwd() instead of __dirname because Next.js Webpack bundles
+// change __dirname to .next/server/ at runtime. process.cwd() always points
+// to the project root where the data/ folder lives.
+const LAWS_DIR = path.join(process.cwd(), 'data', 'laws');
 
 /**
  * Parse a single markdown file containing one or more law entries.
@@ -91,7 +94,7 @@ function parseEntry(block, filePath) {
 
   // Validate required fields
   if (!frontmatter.id || !frontmatter.title) {
-    console.warn(`[ARAM Law Loader] Skipping entry in ${filePath}: missing id or title`);
+    console.warn(`[Nilai Law Loader] Skipping entry in ${filePath}: missing id or title`);
     return null;
   }
 
@@ -120,7 +123,7 @@ function loadLawsFromMarkdown() {
 
   // Check if laws directory exists
   if (!fs.existsSync(LAWS_DIR)) {
-    console.log('[ARAM Law Loader] No data/laws/ directory found. Skipping MD law loading.');
+    console.log('[Nilai Law Loader] No data/laws/ directory found. Skipping MD law loading.');
     return allEntries;
   }
 
@@ -134,13 +137,13 @@ function loadLawsFromMarkdown() {
       const content = fs.readFileSync(filePath, 'utf-8');
       const entries = parseMdFile(content, file);
       allEntries.push(...entries);
-      console.log(`[ARAM Law Loader] Loaded ${entries.length} entries from ${file}`);
+      console.log(`[Nilai Law Loader] Loaded ${entries.length} entries from ${file}`);
     } catch (err) {
-      console.error(`[ARAM Law Loader] Error reading ${file}:`, err.message);
+      console.error(`[Nilai Law Loader] Error reading ${file}:`, err.message);
     }
   }
 
-  console.log(`[ARAM Law Loader] Total: ${allEntries.length} law entries loaded from ${files.length} MD files`);
+  console.log(`[Nilai Law Loader] Total: ${allEntries.length} law entries loaded from ${files.length} MD files`);
   return allEntries;
 }
 

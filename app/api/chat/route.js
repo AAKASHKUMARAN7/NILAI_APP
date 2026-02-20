@@ -1,4 +1,4 @@
-// ARAM — API Route: Chat with Local Constitutional Reasoning Engine
+// Nilai — API Route: Chat with Local Constitutional Reasoning Engine
 // Custom-built model + RAG retrieval from constitutional knowledge base
 // No external API keys needed — runs entirely on your server
 
@@ -15,7 +15,7 @@ export async function POST(request) {
     const relevantPassages = searchConstitution(userMessage, 5);
 
     // ═══ LOCAL MODEL INFERENCE ═══
-    // Run ARAM's own constitutional reasoning engine
+    // Run Nilai's own constitutional reasoning engine
     const text = runInference(userMessage, relevantPassages, conversationHistory);
 
     return Response.json({

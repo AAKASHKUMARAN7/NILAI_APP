@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import AramLogo from './AramLogo';
+import NilaiLogo from './NilaiLogo';
 
-// ARAM — Left Sidebar
+// Nilai — Left Sidebar
 // Shows constitutional topics and session memory indicator
 export default function Sidebar({ topics, onTopicClick, memoryCount, onClearMemory, learningStats }) {
   const [showStats, setShowStats] = useState(false);
@@ -12,10 +12,10 @@ export default function Sidebar({ topics, onTopicClick, memoryCount, onClearMemo
     <aside className="sidebar">
       {/* Logo and title */}
       <div className="sidebar-header">
-        <AramLogo size={36} />
+        <NilaiLogo size={36} color="#8B7355" />
         <div>
-          <div className="sidebar-title">அறம் ARAM</div>
-          <div className="sidebar-tagline">Constitutional Intelligence</div>
+          <div className="sidebar-title">நிலை Nilai</div>
+          <div className="sidebar-tagline">State of Being</div>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ export default function Sidebar({ topics, onTopicClick, memoryCount, onClearMemo
         className="learning-toggle"
         onClick={() => setShowStats(!showStats)}
       >
-        🧠 {showStats ? 'Hide' : 'Show'} Learning Stats
+        {showStats ? 'Hide' : 'Show'} Learning Stats
       </button>
 
       {showStats && learningStats && (
@@ -79,7 +79,6 @@ export default function Sidebar({ topics, onTopicClick, memoryCount, onClearMemo
             onClick={() => onTopicClick(topic.prompt)}
             title={topic.description}
           >
-            <span className="topic-icon">{topic.icon}</span>
             <span className="topic-name">{topic.name}</span>
           </button>
         ))}
@@ -87,8 +86,7 @@ export default function Sidebar({ topics, onTopicClick, memoryCount, onClearMemo
 
       {/* Footer */}
       <div className="sidebar-footer">
-        <p>Built with Next.js + Groq</p>
-        <p>Cost: ₹0 · Open Source</p>
+        <p>நிலை — Your Constitutional Guide</p>
       </div>
     </aside>
   );

@@ -1,4 +1,4 @@
-// ARAM — API Route: User Feedback for Dynamic Learning
+// Nilai — API Route: User Feedback for Dynamic Learning
 // Records what was helpful/unhelpful to improve over time
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';

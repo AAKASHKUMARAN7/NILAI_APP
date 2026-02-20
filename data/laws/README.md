@@ -1,6 +1,6 @@
-# How to Add New Laws to ARAM
+# How to Add New Laws to Nilai
 
-Drop `.md` files into this folder (`data/laws/`) and ARAM will automatically load them into its knowledge base.
+Drop `.md` files into this folder (`data/laws/`) and Nilai will automatically load them into its knowledge base.
 
 ## File Format
 
